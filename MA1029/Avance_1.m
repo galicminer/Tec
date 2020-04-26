@@ -2,7 +2,8 @@
 [Z,Y]=meshgrid(-20:1:20,-20:1:20);
 a=4.20;
 b=6.9;
-X=((Z/a).^2+(Y/b).^2)-1;
+X0=4
+X=((Z/a).^2+(Y/b).^2)-X0;
 surf(X,Y,Z)
 hold on;
 %% graficar las curvas de nivel
@@ -12,11 +13,11 @@ xk1=-0.5;
 xk2=0;
 xk3=1;
 xk4=2;
-s=@(a,xk)(a*(sqrt(xk+1)));
-dibujarelipse(s(b,xk1),s(a,xk1),z0,y0,xk1);
-dibujarelipse(s(b,xk2),s(a,xk2),z0,y0,xk2);
-dibujarelipse(s(b,xk3),s(a,xk3),z0,y0,xk3);
-dibujarelipse(s(b,xk4),s(a,xk4),z0,y0,xk4);
+s=@(a,xk,X0)(a*(sqrt(xk+X0)));
+dibujarelipse(s(b,xk1,X0),s(a,xk1,X0),z0,y0,xk1);
+dibujarelipse(s(b,xk2,X0),s(a,xk2,X0),z0,y0,xk2);
+dibujarelipse(s(b,xk3,X0),s(a,xk3,X0),z0,y0,xk3);
+dibujarelipse(s(b,xk4,X0),s(a,xk4,X0),z0,y0,xk4);
 %% graficar la elipsoide
 a=4.20;
 b=6.9;

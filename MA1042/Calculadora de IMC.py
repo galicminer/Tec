@@ -9,10 +9,7 @@ nombre, apellido, edad, estatura, peso = datos_persona
 
 # se realizan los calculos de indice de masa corporal
 imc = peso / estatura ** 2 # Estatura al cuadrado (exponente 2)
-"""
-hola amigos de youtube
 
-"""
 #  se realiza la interacion con el usuario
 print("Calculadora de IMC\n")
 print("¡Hola,",nombre,apellido,"!\n")
