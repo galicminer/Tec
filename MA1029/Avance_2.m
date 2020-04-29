@@ -17,10 +17,10 @@ xlabel("x axis")
 ylabel("y axis")
 zlabel("z axis")
 %%
-h=1;
-c=2;
-m=3;
-n=5;
+h=2;
+c=5;
+m=4;
+n=3;
 [x,y,z]=ellipsoid(h,0,0,c,m,n,30);
 surf(x,y,z);
 hold on;
@@ -32,6 +32,6 @@ zlabel("z axis")
 z0=0;
 y0=0;
 xk1=0;
-s=@(m,n,h,xk)((m/n)*(sqrt(n^2-(xk-h)^2)));
+s=@(m,c,h,xk)((m/c)*(sqrt(c^2-(xk-h)^2)));
 dibujarelipse(s(m,c,h,xk1),s(n,c,h,xk1),z0,y0,xk1);
 hold on;
