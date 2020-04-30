@@ -1,0 +1,5 @@
+print("Convertidor de metros a pies")
+print("ingrese los metros a se convertidos")
+Metros=int(input())
+pies= Metros *100/(2.54*12)
+print("El valor en pies es: "+str(pies))

@@ -1,5 +1,5 @@
 Funciondelcambio=@(x,y)(2*x-3*y+1);
-y=Integracion_Euler(0,3,0.2,Funciondelcambio,1);
+y=Integrate_Euler(0,3,0.2,Funciondelcambio,1);
 x=0:0.2:3;
 plot(x,y);
 hold on;
