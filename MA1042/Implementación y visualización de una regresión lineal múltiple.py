@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np 
 import matplotlib.pyplot as plt 
 from pathlib import Path
-
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn import metrics
@@ -23,14 +22,12 @@ dataset=datos_consumo.fillna(method='ffill')
 
 X=dataset[['Carbohidratos (g)','Lípidos/grasas (g)','Proteína (g)']].values
 Y=dataset['Calorías (kcal)'].values
-
 X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=0.2,random_state=0)
 
 modelo_regresion=LinearRegression()
 modelo_regresion.fit(X_train,Y_train)
 
 X_columns=['Carbohidratos (g)','Lípidos/grasas (g)','Proteína (g)']
-
 coeff_df=pd.DataFrame(modelo_regresion.coef_,X_columns,columns=['Coeficientes'])
 print(coeff_df)
 
