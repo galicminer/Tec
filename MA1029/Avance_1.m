@@ -1,11 +1,14 @@
 %%graficar la superficie
-[Z,Y]=meshgrid(-20:1:20,-20:1:20);
+[Z,Y]=meshgrid(-50:5:50,-50:5:50);
 a=4.20;
 b=6.9;
-X0=4
+X0=1
 X=((Z/a).^2+(Y/b).^2)-X0;
 surf(X,Y,Z)
 hold on;
+xlabel("x axis")
+ylabel("y axis")
+zlabel("z axis")
 %% graficar las curvas de nivel
 z0=0;
 y0=0;
@@ -28,6 +31,9 @@ hold on;
 plot3(1,0,0,'o');
 hold on;
 axis equal;
+xlabel("x axis")
+ylabel("y axis")
+zlabel("z axis")
 %% trazas elipse
 z0=0;
 y0=0;
@@ -41,4 +47,7 @@ hold on;
 dibujarelipse(s(b,a,xk2),s(c,a,xk2),z0,y0,xk2);
 dibujarelipse(s(b,a,xk3),s(c,a,xk3),z0,y0,xk3);
 dibujarelipse(s(b,a,xk4),s(c,a,xk4),z0,y0,xk4);
+xlabel("x axis")
+ylabel("y axis")
+zlabel("z axis")
 

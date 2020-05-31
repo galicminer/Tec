@@ -11,7 +11,7 @@ while true
     e=(xr-xrant)/xr;
     xrant=xr;
     c=c+1;
-    if abs(e)<0.00001
+    if abs(e)<errores
         break
     end
 end
