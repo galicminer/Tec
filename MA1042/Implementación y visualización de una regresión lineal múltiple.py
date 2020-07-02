@@ -1,6 +1,6 @@
 #Importación de dependencias
 import pandas as pd
-import numpy as np 
+import numpy as np
 import matplotlib.pyplot as plt 
 from pathlib import Path
 from sklearn.model_selection import train_test_split
@@ -38,7 +38,7 @@ Y_pred=modelo_regresion.predict(X_test)
 Validacion=pd.DataFrame({'Actual':Y_test,'Prediccion':Y_pred})
 Muestra_validacion=Validacion.head(25)
 print(Muestra_validacion)
-print("Desviacion media:",np.sqrt(metrics.mean_squared_error(Y_test,Y_pred)))
+#print("Desviacion media:",np.sqrt(metrics.mean_squared_error(Y_test,Y_pred)))
 
 Muestra_validacion.plot.bar(rot=0)
 plt.title("Comparación de calorías actuales y de predicción")
