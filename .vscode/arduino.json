@@ -1,0 +1,7 @@
+{
+    "programmer": "AVR ISP",
+    "board": "arduino:avr:nano",
+    "configuration": "cpu=atmega328",
+    "sketch": "Baja\\Arduino IDE\\Tachometer\\Simulator\\Simulator.ino",
+    "port": "COM6"
+}
