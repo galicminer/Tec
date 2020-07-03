@@ -1,5 +1,5 @@
 #define Signalpin 13
-#define RPM 300
+#define RPM 10000
 float RPS=RPM/60;
 float timing=1000/RPS;
 void setup() {
@@ -7,8 +7,7 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(Signalpin,HIGH);
-  delay(timing);
   digitalWrite(Signalpin,LOW);
   delay(timing);
+  digitalWrite(Signalpin,HIGH);
 }

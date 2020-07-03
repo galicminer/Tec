@@ -1,6 +1,4 @@
 /*
-Tachometer using micros
-
 On this sketch we are going to measure the period between pulses using the micros() function to get the RPM
 (Revolutions Per Minute) from a sensor on pin 2.
 This way of measuring RPM makes it accurate, responsive and versatile. No matter how fast or slow the loop is
